@@ -1,0 +1,25 @@
+name: Replace dossier and portrait
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  replace:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replace files
+        run: |
+          set -e
+          test -f the-shawn-apps-file.html
+          test -f assets/portrait-apps-github.jpg
+          cp the-shawn-apps-file.html index.html
+          rm the-shawn-apps-file.html
+          cp assets/portrait-apps-github.jpg assets/portrait-apps.jpg
+          rm assets/portrait-apps-github.jpg
+          git config user.name "asouthbendcrusader"
+          git config user.email "asouthbendcrusader@users.noreply.github.com"
+          git add -A
+          git status --short
+          git commit -m "Replace dossier and portrait with revised versions"
+          git push
