@@ -1,0 +1,25 @@
+{
+ "name": "My Crusader",
+ "short_name": "My Crusader",
+ "description": "PUBLIC COURT RECORDS \u2014 the complete public file on the people who hold power, free to every citizen.",
+ "start_url": "./",
+ "scope": "./",
+ "display": "standalone",
+ "background_color": "#0b0b0d",
+ "theme_color": "#0b0b0d",
+ "orientation": "portrait",
+ "icons": [
+  {
+   "src": "icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any"
+  }
+ ]
+}
